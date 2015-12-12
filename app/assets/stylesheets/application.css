@@ -13,7 +13,14 @@
  *= require_tree .
  *= require_self
  */
-body { padding-top: 100px; }
+body { padding-top: 100px; 
+		color:#1aa3ff;
+		background-color:#595959;
+		}
+a:link, a:active, a:visited {
+        color:#1aa3ff;	
+        }
+h1 { color:#d9b3ff;}
 footer { margin-top: 100px; }
 table, td, th { 
 	vertical-align: middle; 
@@ -21,5 +28,6 @@ table, td, th {
 	padding-right: 40px;
 }
 th { 
+	color: #ff9966;
 	border-bottom: 1px solid #DDD; 
 }

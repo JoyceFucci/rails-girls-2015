@@ -65,6 +65,9 @@ class JoinhasController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_joinha
       @joinha = Joinha.find(params[:id])
+      @comments = @joinha.comments.all
+@comment = @joinha.comments.build
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
