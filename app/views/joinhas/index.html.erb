@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Joinhas unidos</h1>
+
+<table class="joinha">
+  <thead>
+    <tr>
+      <th>De quem foi</th> 
+      <th>Pra que</th> 
+      <th>Foto</th>
+      <th>Dia brilhante</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @joinhas.each do |joinha| %>
+      <tr>
+        <td><%= joinha.name %></td>
+        <td><%= joinha.description %></td>
+        <td><%= image_tag(joinha.photo_url, width: 100) if joinha.photo.present? %></td>
+        <td><%= joinha.upload_date %></td>
+        <td><%= link_to 'Show', joinha %></td>
+        <td><%= link_to 'Edit', edit_joinha_path(joinha) %></td>
+        <td><%= link_to 'Destroy', joinha, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Joinha', new_joinha_path %>

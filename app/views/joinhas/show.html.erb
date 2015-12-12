@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @joinha.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @joinha.description %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= image_tag(@joinha.photo_url, width: 600) if @joinha.photo.present? %>
+</p>
+
+<p>
+  <strong>Upload date:</strong>
+  <%= @joinha.upload_date %>
+</p>
+
+<%= link_to 'Edit', edit_joinha_path(@joinha) %> |
+<%= link_to 'Back', joinhas_path %>
